@@ -11,7 +11,7 @@ public class ConditionalStatement2 {
             System.out.println("You Lose");
         }
 
-        //doSomething()
+        doSomething(Boolean.TRUE);
     }
 
 
