@@ -28,7 +28,7 @@ public class HighLowGame {
                 System.out.println(String.format("The answer was %s, you win!", String.valueOf(guess)));
                 break;
             }
-
+           System.out.println(String.format("You are %s percent away..Try again",String.valueOf((answer-guess)*10)));
             // Add the conditions to tell the player whether they should guess higher or lower!
 
         }
