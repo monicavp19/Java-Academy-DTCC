@@ -52,10 +52,10 @@ public class BasicArithmetic {
     }
 
     public static int divide(int x, int y) {
-        return x/y;
+        return y/3;
     }
 
     public static int remainder(int x, int y) {
-        return x%y;
+        return y%x;
     }
 }
