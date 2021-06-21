@@ -1,17 +1,16 @@
 package assignment_3;
 
-import jdk.jshell.spi.ExecutionControl;
 
 public class DogPound {
     private static double assignmentScore = 0.0;
 
     /*
         The DogPound is a warm up exercise!
-
+ß
         This is assignment part 2a
      */
 
-    public static void main (String[] args) throws ExecutionControl.NotImplementedException {
+    public static void main (String[] args) throws Exception {
         /*
             Please do not modify the code at this point!
             For the sections you will modify, there will be a "Modify Me" comment
@@ -60,7 +59,7 @@ public class DogPound {
             name = null;
         }
 
-        public void setName(String n) throws ExecutionControl.NotImplementedException {
+        public void setName(String n) throws Exception {
             /*
                 Please finish this method, you want to set the private variable "name" of the
                 class Dog to the value of the parameter of the "setName" method.
@@ -70,7 +69,7 @@ public class DogPound {
                 <data type> <variable name> = <expression>
              */
 
-            throw new ExecutionControl.NotImplementedException("Please implement this function");
+            throw new Exception("Please implement this function");
         }
 
         public String speak() {
