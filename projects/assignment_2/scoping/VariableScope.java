@@ -8,12 +8,15 @@ public class VariableScope {
         // If so can you uncomment this and the code will compile?
         // System.out.println(i);
 
+        System.out.println("it will not compile");
+
         if(true) {
             int i = 0;
         }
         // Question 2, does i exist at this point?
         // If so can you uncomment this and the code will compile?
         // System.out.println(i);
+        System.out.println("it will still not compile");
     }
 
     public static void example_1(){
