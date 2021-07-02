@@ -2,11 +2,10 @@ package assignment_3;
 
 
 public class DogPound {
-    private static double assignmentScore = 0.0;
 
     /*
         The DogPound is a warm up exercise!
-ß
+
         This is assignment part 2a
      */
 
@@ -15,35 +14,27 @@ public class DogPound {
             Please do not modify the code at this point!
             For the sections you will modify, there will be a "Modify Me" comment
          */
-        try {
-            Dog myDog = new Dog();
-            myDog.setName("Fido");
+        Dog myDog = new Dog();
+        myDog.setName("Fido");
 
-            if(myDog.name != null ) {
-                assignmentScore += 50;
-            }
-
-            // If we print the variable "x" what do you think the value will be?
-            String x = myDog.name;
-            System.out.println(String.format("The value of variable x is %s", x));
-
-            // If we change the value of the variable "x" will that affect myDog.name?
-            x = "Other Name";
-            System.out.println(String.format("The value of variable x is %s", x));
-            System.out.println(String.format("The value of variable myDog.name is %s", myDog.name));
-
-            String dogsSpeech = myDog.speak();
-            if(dogsSpeech != null) {
-                assignmentScore += 50;
-                System.out.println(String.format("The value of variable dogsSpeech is %s", dogsSpeech));
-            }
-
+        if(myDog.name != null ) {
+            System.out.println("Great the Dog's name is: " + myDog.name);
         }
-        catch (Exception ex) {
 
-        } finally {
-            System.out.println(String.format("Section 1a Total is [%.2f]", assignmentScore));
+        // If we print the variable "x" what do you think the value will be?
+        String x = myDog.name;
+        System.out.println(String.format("The value of variable x is %s", x));
+
+        // If we change the value of the variable "x" will that affect myDog.name?
+        x = "Other Name";
+        System.out.println(String.format("The value of variable x is %s", x));
+        System.out.println(String.format("The value of variable myDog.name is %s", myDog.name));
+
+        String dogsSpeech = myDog.speak();
+        if(dogsSpeech != null) {
+            System.out.println(String.format("The value of variable dogsSpeech is %s", dogsSpeech));
         }
+
     }
 
 
