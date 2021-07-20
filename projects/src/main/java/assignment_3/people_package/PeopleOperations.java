@@ -1,7 +1,9 @@
-package assignment_3.people_package;
+package src.main.java.assignment_3.people_package;
 
 
-import java.util.ArrayList;
+import java.util.*;
+
+import assignment_3.people_package.Person;
 
 
 public class PeopleOperations {
@@ -12,11 +14,23 @@ public class PeopleOperations {
          */
 
 
-        ArrayList<Person> people = new ArrayList<Person>();
-        Person youngestPerson = getYoungestPerson(people);
-        Person oldestPerson = getOldestPerson(people);
-        ArrayList<Person> sortedByAgeList = getSortedListByAge(people);
-        ArrayList<Person> sortedByNameList = getSortedListByName(people, false);
+        ArrayList<Person> peoplesCollection = new ArrayList<Person>();
+        Random r=new Random();
+        for(int i=0; i<=10; i++){
+            int randomId = r.nextInt(1000);
+            int randomAge= r.nextInt(99);
+
+            Person M= new Person();
+            M.setName("A-"+i);
+            M.setAge(randomAge);
+            M.setId(randomId);
+            System.out.println("value "+ M.toString());
+            peoplesCollection.add(M);
+        }
+        Person youngestPerson = getYoungestPerson(peoplesCollection);
+        Person oldestPerson = getOldestPerson(peoplesCollection);
+        ArrayList<Person> sortedByAgeList = getSortedListByAge(peoplesCollection);
+        ArrayList<Person> sortedByNameList = getSortedListByName(peoplesCollection, false);
 
 
         /*
@@ -35,19 +49,32 @@ public class PeopleOperations {
     }
 
     public static Person getYoungestPerson(ArrayList<Person> list) throws Exception {
-        throw new Exception("Please implement this method");
+        return Collections.min(list, getAgeComparator());
+
+        //throw new Exception("Please implement this method");
     }
 
     public static Person getOldestPerson(ArrayList<Person> list) throws Exception {
-        throw new Exception("Please implement this method");
+        return Collections.max(list, getAgeComparator());
     }
 
     public static ArrayList<Person> getSortedListByAge(ArrayList<Person> list) throws Exception{
-        throw new Exception("Please implement this method");
+      Collections.sort(list, getAgeComparator());
+      return list;
+    }
+
+    private static Comparator<Person> getAgeComparator() {
+        return new Comparator<Person>() {
+            public int compare(Person o1, Person o2) {
+                return o1.getAge() - o2.getAge();
+            }
+        };
     }
 
     public static ArrayList<Person> getSortedListByName(ArrayList<Person> list, boolean isAscending) throws Exception {
-        throw new Exception("Please implement this method");
+         Collections.sort(list);
+         return list;
     }
+
 
 }

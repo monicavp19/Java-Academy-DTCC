@@ -1,4 +1,6 @@
 package assignment_3.people_package;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 /*
     This is the class you need to work on
@@ -9,7 +11,7 @@ import java.util.Random;
     1) https://stackoverflow.com/questions/1841847/can-i-compile-a-java-file-with-a-different-name-than-the-class
  */
 
-public class Person {
+public class Person implements Comparable{
     private String name;
     private int age;
     private int id;
@@ -31,12 +33,11 @@ public class Person {
             M.setAge(randomAge);
             M.setId(randomId);
             System.out.println("value "+ M.toString());
+
         }
-
-
-
-
     }
+
+
 
     public int getAge() {
         return age;
@@ -61,5 +62,16 @@ public class Person {
                 ", age=" + age +
                 ", id=" + id +
                 '}';
+    }
+
+    public int compareTo(Object o) {
+        Person refernce = (Person) o;
+        if(this.getName().length() == refernce.getName().length()) {
+            return this.getName().compareTo(refernce.getName());
+        }
+        else {
+            return this.getName().length() - refernce.getName().length();
+        }
+
     }
 }
