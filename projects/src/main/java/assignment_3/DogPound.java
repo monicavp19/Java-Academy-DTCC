@@ -1,4 +1,4 @@
-package assignment_3;
+package src.main.java.assignment_3;
 
 
 public class DogPound {
@@ -42,15 +42,15 @@ public class DogPound {
         /*
             Modify Me
          */
-        public int age;
-        public String name;
+        private int age;
+        private String name;
 
         public Dog() {
-            age = -1;
-            name = null;
+            age = 3;
+            name = "Leo";
         }
 
-        public void setName(String n) throws Exception {
+        public void setName(String n)  {
             /*
                 Please finish this method, you want to set the private variable "name" of the
                 class Dog to the value of the parameter of the "setName" method.
@@ -59,8 +59,9 @@ public class DogPound {
 
                 <data type> <variable name> = <expression>
              */
+                this.name =n;
 
-            throw new Exception("Please implement this function");
+           // throw new Exception("Please implement this function");
         }
 
         public String speak() {
@@ -68,8 +69,8 @@ public class DogPound {
                 Please finish this method, you want to ensure that your dog speaks
                 when you ask them to.
              */
-
-            return null;
+           // String dogsSpeech = "woof woof";
+            return "woof woof";
         }
     }
 }
